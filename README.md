@@ -27,16 +27,16 @@ Prismでは多数のスクリプト言語に対応しています。Prismのイ�
 そこで当プラグインでは、tinymce.initの中にprism_languagesという項目を記入し、その中に{text: '○○', value: '○○'},という形式でPrismで利用している言語の一覧を入れることで、Prismプラグイン内で表示させることができます。prism_languagesの項目が記入されていなければ、使用方法の中で記載した４言語が表示されます。
 
 例えば、Markup、JavaScript、css、PHP、SQL、Smartyの６言語をプルダウンメニューに表示させたい場合は、以下のような記述となります。  
-    prism_languages: [
-    	{text: 'HTML/XML',   value: 'markup'},
-    	{text: 'JavaScript', value: 'javascript'},
-    	{text: 'CSS',        value: 'css'},
-    	{text: 'PHP',        value: 'php'},
-    	{text: 'SQL',        value: 'sql'},
-    	{text: 'Smarty',     value: 'smarty'}
-    ],
-text:''にそれぞれの言語名、value:''にPrismの公式サイト（https://prismjs.com/）のSupported languagesで解説されているlanguage-○○の『○○』の部分を入れ、{}で囲ってください。  
-複数記入する際には}（波括弧閉じる）の後ろに必ず,（コンマ）を入れてください。ただし、例外として最終行はなくても大丈夫です。入れ忘れるとエラーの原因となりますのでご注意ください。
+    prism_languages: \[
+    	\{text: 'HTML/XML',   value: 'markup'\},
+    	\{text: 'JavaScript', value: 'javascript'\},
+    	\{text: 'CSS',        value: 'css'\},
+    	\{text: 'PHP',        value: 'php'\},
+    	\{text: 'SQL',        value: 'sql'\},
+    	\{text: 'Smarty',     value: 'smarty'\}
+    \],
+text:''にそれぞれの言語名、value:''にPrismの公式サイト（ https://prismjs.com/ ）のSupported languagesで解説されているlanguage-○○の『○○』の部分を入れ、\{\}で囲ってください。  
+複数記入する際には\}（波括弧閉じる）の後ろに必ず,（コンマ）を入れてください。ただし、例外として最終行はなくても大丈夫です。入れ忘れるとエラーの原因となりますのでご注意ください。
 
 
 ### 行数を表示非表示にしたり、先頭行の行数を指定したり、強調したい行を指定する方法  
