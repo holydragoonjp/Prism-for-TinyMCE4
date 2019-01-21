@@ -27,14 +27,14 @@ Prismでは多数のスクリプト言語に対応しています。Prismのイ�
 そこで当プラグインでは、tinymce.initの中にprism_languagesという項目を記入し、その中に{text: '○○', value: '○○'},という形式でPrismで利用している言語の一覧を入れることで、Prismプラグイン内で表示させることができます。prism_languagesの項目が記入されていなければ、使用方法の中で記載した４言語が表示されます。
 
 例えば、Markup、JavaScript、css、PHP、SQL、Smartyの６言語をプルダウンメニューに表示させたい場合は、以下のような記述となります。  
-    prism_languages: \[  
-    	\{text: 'HTML/XML',   value: 'markup'\},  
-    	\{text: 'JavaScript', value: 'javascript'\},  
-    	\{text: 'CSS',        value: 'css'\},  
-    	\{text: 'PHP',        value: 'php'\},  
-    	\{text: 'SQL',        value: 'sql'\},  
-    	\{text: 'Smarty',     value: 'smarty'\}  
-    \],  
+    　prism_languages: \[  
+    　	\{text: 'HTML/XML',   value: 'markup'\},  
+    　	\{text: 'JavaScript', value: 'javascript'\},  
+    　	\{text: 'CSS',        value: 'css'\},  
+    　	\{text: 'PHP',        value: 'php'\},  
+    　	\{text: 'SQL',        value: 'sql'\},  
+    　	\{text: 'Smarty',     value: 'smarty'\}  
+    　\],  
 text:''にそれぞれの言語名、value:''にPrismの公式サイト（ https://prismjs.com/ ）のSupported languagesで解説されているlanguage-○○の『○○』の部分を入れ、\{\}で囲ってください。  
 複数記入する際には\}（波括弧閉じる）の後ろに必ず,（コンマ）を入れてください。ただし、例外として最終行はなくても大丈夫です。入れ忘れるとエラーの原因となりますのでご注意ください。
 
@@ -56,7 +56,7 @@ Prismではプラグインの導入により、様々な表示をさせること
 
 ### プラグインの削除方法
 1. TinyMCEのフォルダに含まれている、pluginフォルダ内のprismフォルダをサーバーから削除。
-2. tinymce.initのpluginsやtoolbar内に記載したprismの文字列を削除し、prism_languagesを指定している場合は、prism_languages: [～～]の記載を削除して、tinymce.initが含まれているファイルをサーバーにアップロードしてください。
+2. tinymce.initのpluginsやtoolbar内に記載したprismの文字列を削除し、prism_languagesを指定している場合は、prism_languages: \[～～\]の記載を削除して、tinymce.initが含まれているファイルをサーバーにアップロードしてください。
 
 - - - - -
 
@@ -66,10 +66,10 @@ In the plugin folder of the folder of the TinyMCE 4 of the server that is used b
 
 In order to use this plugin, please insert "prism" into plugins and toolbar of tinymce.init which is the setting of TinyMCE 4 respectively.  
 For Example:  
-    plugins: [
-    	'advlist autolink lists link image charmap print preview anchor pagebreak prism'
-    ],
-    toolbar: ' undo redo | bold italic strikethrough | bullist numlist | link pagebreak code prism ',
+    　plugins: \[  
+    　	'advlist autolink lists link image charmap print preview anchor pagebreak prism'  
+    　\],  
+    　toolbar: ' undo redo | bold italic strikethrough | bullist numlist | link pagebreak code prism ',  
 In the above example, prism is inserted at the end of each setting.  
 Please upload the file describing tinymce.init to the server by FTP etc when inserting it.  
 When you click the button of Prism plugin created by this, or select Prism from the menu item, the four languages Markup, css, C-like, JavaScript are displayed in the pull-down menu of the popup window.  
@@ -85,20 +85,20 @@ In addition, &lt;code&gt; ~~ &lt;/code&gt; tag which is not enclosed with &lt;pr
 ### How to specify the script language to be displayed in the plugin pull-down menu
 Prism supports many scripting languages.  
 Since Prism can freely select and introduce those languages when installing it, I think that the language you want to display in the pull-down menu will differ depending on the usage situation of each person.  
-So in this plugin, enter the item prism_languages in tinymce.init and list the languages that Prism uses in the format {text: 'xx', value: 'xx'} in it By inserting it, you can display it in the Prism plugin.  
+So in this plugin, enter the item prism_languages in tinymce.init and list the languages that Prism uses in the format \{text: 'xx', value: 'xx'\} in it By inserting it, you can display it in the Prism plugin.  
 If the item of prism_languages is not filled out, the four languages mentioned in the usage are displayed.
 
 For example, if you want to display 6 languages such as Markup, JavaScript, css, PHP, SQL, Smarty in the pull-down menu, it is as follows.  
-    prism_languages: [
-    	{text: 'HTML/XML',   value: 'markup'},
-    	{text: 'JavaScript', value: 'javascript'},
-    	{text: 'CSS',        value: 'css'},
-    	{text: 'PHP',        value: 'php'},
-    	{text: 'SQL',        value: 'sql'},
-    	{text: 'Smarty',     value: 'smarty'}
-    ],
-Please enter "xx" part of language-xx described in Supported languages of Prism's official website (https://prismjs.com/) in value:'' and please insert each language name into text: ''. Please enclose it with {} when inserting it.  
-Be sure to add comma after {} when writing more than one. However, as an exception there is no need to make the last line.
+    　prism_languages: \[  
+    　	\{text: 'HTML/XML',   value: 'markup'\},  
+    　	\{text: 'JavaScript', value: 'javascript'\},  
+    　	\{text: 'CSS',        value: 'css'\},  
+    　	\{text: 'PHP',        value: 'php'\},  
+    　	\{text: 'SQL',        value: 'sql'\},  
+    　	\{text: 'Smarty',     value: 'smarty'\}  
+    　\],  
+Please enter "xx" part of language-xx described in Supported languages of Prism's official website (https://prismjs.com/) in value:'' and please insert each language name into text: ''. Please enclose it with \{\} when inserting it.  
+Be sure to add comma after \{\} when writing more than one. However, as an exception there is no need to make the last line.
 Please be aware that it will cause an error if you forget to insert it. 
 
 ### How to hide the number of rows, specify the number of lines of the first line, or specify lines to emphasize
@@ -117,4 +117,4 @@ Damage caused by using this plugin is not responsible at all.
 
 ### How to delete a plugin
 1. Delete the prism folder in the plugin folder included in the TinyMCE folder from the server.
-2. Delete the prism character string described in tinymce.init 's plugins and toolbar, and if prism_languages is specified, delete the description of prism_languages: [ ~~ ] and add the file containing tinymce.init Please upload it to the server.
+2. Delete the prism character string described in tinymce.init 's plugins and toolbar, and if prism_languages is specified, delete the description of prism_languages: \[ ~~ \] and add the file containing tinymce.init Please upload it to the server.
