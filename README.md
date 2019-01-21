@@ -7,9 +7,9 @@ prismフォルダを中身ごとご利用になられているサーバーのTin
 
 次にこのプラグインを利用するために、TinyMCE4の設定であるtinymce.initのpluginsの中と、toolbarの中にそれぞれprism を挿入してください。  
 例）  
-    plugins: [
+    plugins: \[  
     	'advlist autolink lists link image charmap print preview anchor pagebreak prism'
-    ],
+    \],
     toolbar: ' undo redo | bold italic strikethrough | bullist numlist | link pagebreak code prism ',
 （上の例では、それぞれの設定の一番最後にprismが挿入されています）  
 挿入できたらtinymce.initを記載しているファイルをプラグインの本体と同じく、FTPなどでサーバーにアップロードしてください。  
