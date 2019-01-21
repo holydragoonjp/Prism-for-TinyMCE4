@@ -1,6 +1,9 @@
 # Prism-for-TinyMCE4
 
 ## 【日本語】  
+### このプラグインは何？
+TinyMCE4にPrism.js（ https://prismjs.com/ ）のボタンを追加して、シンタックスハイライトを表示させるためのプラグインです。
+
 ### 使用方法  
 prismフォルダを中身ごとご利用になられているサーバーのTinyMCE4の本体を入れているフォルダのpluginフォルダの中に、FTPなどを利用して
 アスキーモードでアップロードしてください。
@@ -61,6 +64,9 @@ Prismではプラグインの導入により、様々な表示をさせること
 - - - - -
 
 ## 【English】
+### What is this plugin?
+This is a plugin for adding syntax highlighting by adding a button of Prism.js (https://prismjs.com/) to TinyMCE 4.
+
 ### Usage
 In the plugin folder of the folder of the TinyMCE 4 of the server that is used by the contents, use ASCII Please upload in mode.
 
