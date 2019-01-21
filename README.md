@@ -7,10 +7,10 @@ prismフォルダを中身ごとご利用になられているサーバーのTin
 
 次にこのプラグインを利用するために、TinyMCE4の設定であるtinymce.initのpluginsの中と、toolbarの中にそれぞれprism を挿入してください。  
 例）  
-    plugins: \[  
-    	'advlist autolink lists link image charmap print preview anchor pagebreak prism'
-    \],
-    toolbar: ' undo redo | bold italic strikethrough | bullist numlist | link pagebreak code prism ',
+    　plugins: \[  
+    　	'advlist autolink lists link image charmap print preview anchor pagebreak prism'  
+    　\],  
+    　toolbar: ' undo redo | bold italic strikethrough | bullist numlist | link pagebreak code prism ',  
 （上の例では、それぞれの設定の一番最後にprismが挿入されています）  
 挿入できたらtinymce.initを記載しているファイルをプラグインの本体と同じく、FTPなどでサーバーにアップロードしてください。  
 これで作成されたPrismプラグインのボタンをクリックしたり、メニューアイテムからPrismを選択したりすると、Markup、css、C-like、JavaScriptの４つの言語がポップアップウィンドウのプルダウンメニュー内に表示されます。  
@@ -27,14 +27,14 @@ Prismでは多数のスクリプト言語に対応しています。Prismのイ�
 そこで当プラグインでは、tinymce.initの中にprism_languagesという項目を記入し、その中に{text: '○○', value: '○○'},という形式でPrismで利用している言語の一覧を入れることで、Prismプラグイン内で表示させることができます。prism_languagesの項目が記入されていなければ、使用方法の中で記載した４言語が表示されます。
 
 例えば、Markup、JavaScript、css、PHP、SQL、Smartyの６言語をプルダウンメニューに表示させたい場合は、以下のような記述となります。  
-    prism_languages: \[
-    	\{text: 'HTML/XML',   value: 'markup'\},
-    	\{text: 'JavaScript', value: 'javascript'\},
-    	\{text: 'CSS',        value: 'css'\},
-    	\{text: 'PHP',        value: 'php'\},
-    	\{text: 'SQL',        value: 'sql'\},
-    	\{text: 'Smarty',     value: 'smarty'\}
-    \],
+    prism_languages: \[  
+    	\{text: 'HTML/XML',   value: 'markup'\},  
+    	\{text: 'JavaScript', value: 'javascript'\},  
+    	\{text: 'CSS',        value: 'css'\},  
+    	\{text: 'PHP',        value: 'php'\},  
+    	\{text: 'SQL',        value: 'sql'\},  
+    	\{text: 'Smarty',     value: 'smarty'\}  
+    \],  
 text:''にそれぞれの言語名、value:''にPrismの公式サイト（ https://prismjs.com/ ）のSupported languagesで解説されているlanguage-○○の『○○』の部分を入れ、\{\}で囲ってください。  
 複数記入する際には\}（波括弧閉じる）の後ろに必ず,（コンマ）を入れてください。ただし、例外として最終行はなくても大丈夫です。入れ忘れるとエラーの原因となりますのでご注意ください。
 
