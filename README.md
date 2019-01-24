@@ -10,10 +10,10 @@ prismフォルダを中身ごとご利用になられているサーバーのTin
 
 次にこのプラグインを利用するために、TinyMCE4の設定であるtinymce.initのpluginsの中と、toolbarの中にそれぞれprism を挿入してください。  
 例）  
-<code>plugins: \[  
-	'advlist autolink lists link image charmap print preview anchor pagebreak prism'  
-\],  
-toolbar: ' undo redo | bold italic strikethrough | bullist numlist | link pagebreak code prism ',</code>  
+<pre><code>plugins: \[
+	'advlist autolink lists link image charmap print preview anchor pagebreak prism'
+\], 
+toolbar: ' undo redo | bold italic strikethrough | bullist numlist | link pagebreak code prism ',</code></pre>  
 （上の例では、それぞれの設定の一番最後にprismが挿入されています）  
 挿入できたらtinymce.initを記載しているファイルをプラグインの本体と同じく、FTPなどでサーバーにアップロードしてください。  
 これで作成されたPrismプラグインのボタンをクリックしたり、メニューアイテムからPrismを選択したりすると、Markup、css、C-like、JavaScriptの４つの言語がポップアップウィンドウのプルダウンメニュー内に表示されます。  
@@ -30,14 +30,14 @@ Prismでは多数のスクリプト言語に対応しています。Prismのイ�
 そこで当プラグインでは、tinymce.initの中にprism_languagesという項目を記入し、その中に{text: '○○', value: '○○'},という形式でPrismで利用している言語の一覧を入れることで、Prismプラグイン内で表示させることができます。prism_languagesの項目が記入されていなければ、使用方法の中で記載した４言語が表示されます。
 
 例えば、Markup、JavaScript、css、PHP、SQL、Smartyの６言語をプルダウンメニューに表示させたい場合は、以下のような記述となります。  
-<code>prism_languages: \[  
-	\{text: 'HTML/XML',   value: 'markup'\},  
-	\{text: 'JavaScript', value: 'javascript'\},  
-	\{text: 'CSS',        value: 'css'\},  
-	\{text: 'PHP',        value: 'php'\},  
-	\{text: 'SQL',        value: 'sql'\},  
-	\{text: 'Smarty',     value: 'smarty'\}  
-\],</code>  
+<pre><code>prism_languages: \[
+	\{text: 'HTML/XML',   value: 'markup'\},
+	\{text: 'JavaScript', value: 'javascript'\},
+	\{text: 'CSS',        value: 'css'\},
+	\{text: 'PHP',        value: 'php'\},
+	\{text: 'SQL',        value: 'sql'\},
+	\{text: 'Smarty',     value: 'smarty'\}
+\],</code></pre>  
 text:''にそれぞれの言語名、value:''にPrismの公式サイト（ https://prismjs.com/ ）のSupported languagesで解説されているlanguage-○○の『○○』の部分を入れ、\{\}で囲ってください。  
 複数記入する際には\}（波括弧閉じる）の後ろに必ず,（コンマ）を入れてください。ただし、例外として最終行はなくても大丈夫です。入れ忘れるとエラーの原因となりますのでご注意ください。
 
@@ -72,10 +72,10 @@ In the plugin folder of the folder of the TinyMCE 4 of the server that is used b
 
 In order to use this plugin, please insert "prism" into plugins and toolbar of tinymce.init which is the setting of TinyMCE 4 respectively.  
 For Example:  
-<code>plugins: \[  
-	'advlist autolink lists link image charmap print preview anchor pagebreak prism'  
-\],  
-toolbar: ' undo redo | bold italic strikethrough | bullist numlist | link pagebreak code prism ',  </code>
+<pre><code>plugins: \[
+	'advlist autolink lists link image charmap print preview anchor pagebreak prism'
+\],
+toolbar: ' undo redo | bold italic strikethrough | bullist numlist | link pagebreak code prism ',</code></pre>  
 In the above example, prism is inserted at the end of each setting.  
 Please upload the file describing tinymce.init to the server by FTP etc when inserting it.  
 When you click the button of Prism plugin created by this, or select Prism from the menu item, the four languages Markup, css, C-like, JavaScript are displayed in the pull-down menu of the popup window.  
@@ -95,14 +95,14 @@ So in this plugin, enter the item prism_languages in tinymce.init and list the l
 If the item of prism_languages is not filled out, the four languages mentioned in the usage are displayed.
 
 For example, if you want to display 6 languages such as Markup, JavaScript, css, PHP, SQL, Smarty in the pull-down menu, it is as follows.  
-<code>prism_languages: \[  
-	\{text: 'HTML/XML',   value: 'markup'\},  
-	\{text: 'JavaScript', value: 'javascript'\},  
-	\{text: 'CSS',        value: 'css'\},  
-	\{text: 'PHP',        value: 'php'\},  
-	\{text: 'SQL',        value: 'sql'\},  
-	\{text: 'Smarty',     value: 'smarty'\}  
-\],</code>  
+<pre><code>prism_languages: \[
+	\{text: 'HTML/XML',   value: 'markup'\},
+	\{text: 'JavaScript', value: 'javascript'\},
+	\{text: 'CSS',        value: 'css'\},
+	\{text: 'PHP',        value: 'php'\},
+	\{text: 'SQL',        value: 'sql'\},
+	\{text: 'Smarty',     value: 'smarty'\}
+\],</code></pre>  
 Please enter "xx" part of language-xx described in Supported languages of Prism's official website (https://prismjs.com/) in value:'' and please insert each language name into text: ''. Please enclose it with \{\} when inserting it.  
 Be sure to add comma after \{\} when writing more than one. However, as an exception there is no need to make the last line.
 Please be aware that it will cause an error if you forget to insert it. 
